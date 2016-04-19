@@ -35,12 +35,35 @@ var seedUsers = function () {
     var users = [
         {
             email: 'testing@fsa.com',
-            password: 'password'
+            password: 'password',
+            isAdmin: false
         },
         {
             email: 'obama@gmail.com',
-            password: 'potus'
+            password: 'potus',
+            isAdmin: true
         }
+    ];
+
+    return User.create(users);
+
+};
+
+var seedAddresses = function () {
+
+    var addresses = [
+        {
+            name: 'Anthony',
+            street: '123 Yeoman St',
+            city: 'New York',
+            zipCode: 11213
+        },
+        {
+            name: 'Anthony',
+            street: '123 Yeoman St',
+            city: 'New York',
+            zipCode: 11213
+        },
     ];
 
     return User.create(users);
